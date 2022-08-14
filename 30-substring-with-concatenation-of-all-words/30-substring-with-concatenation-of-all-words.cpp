@@ -14,9 +14,9 @@ public:
     if(s.size()<subStringSize)return ans;   
     for(int i=0;i<words.size();i++){
         mp[words[i]]++;
-        freq[words[i]]++;
         valid[words[i]]=true;
     }
+    freq=mp;
     int start=0,end=subStringSize;
     for(int i=0;i<=s.size() - subStringSize;i++){
         cnt=0;start=i;
