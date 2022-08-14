@@ -32,6 +32,7 @@ public:
                 mp[word]--;
                 if(mp[word]==0)cnt+=freq[word];
             }
+            
             if(cnt==words.size())ans.push_back(start);
         }
     
