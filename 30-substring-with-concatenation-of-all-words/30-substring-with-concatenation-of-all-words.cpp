@@ -11,13 +11,18 @@ public:
     map<string,int>mp;
     map<string,int>freq;
     map<string,bool>valid;
-    if(s.size()<subStringSize)return ans;   
+    
+    if(s.size()<subStringSize)
+        return ans;   
+    
     for(int i=0;i<words.size();i++){
         mp[words[i]]++;
         valid[words[i]]=true;
     }
+    
     freq=mp;
-    int start=0,end=subStringSize;
+    
+    int start=0;
     for(int i=0;i<=s.size() - subStringSize;i++){
         cnt=0;start=i;
         mp=freq;
@@ -31,30 +36,6 @@ public:
         }
     
     }
-//     if(cnt==words.size())ans.push_back(start);
-    
-//     while(end<s.size()){
-//         word = s.substr(start,wordSize);
-//         if(valid[word]){
-//             mp[word]++;
-//             if(mp[word]>0)cnt-=freq[word];;
-//         }
-//         // cout<<word<<" "<<mp[word]<<" ";
-        
-//         word = s.substr(end,wordSize);
-        
-//         if(valid[word]){
-//             mp[word]--;
-//             if(mp[word]==0)cnt+=freq[word];
-//         }
-//         // cout<<word<<" "<<mp[word]<<" "<<cnt<<endl;
-        
-//         start+=wordSize;
-//         end+=wordSize;
-//         if(cnt==words.size())ans.push_back(start);
-        
-        
-//     }
         
     return ans;
     }
