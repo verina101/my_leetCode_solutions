@@ -1,8 +1,8 @@
 class Solution {
 public:
-    map<string, vector<string>>adj;
+    unordered_map<string, vector<string>>adj;
     vector<vector<string>> ans;
-    set<string>vis;
+    unordered_set<string>vis;
     
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
         for(auto &acc:accounts){
