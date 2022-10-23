@@ -2,7 +2,7 @@ class Solution {
 public:
     unordered_map<string, vector<string>>adj;
     vector<vector<string>> ans;
-    unordered_set<string>vis;
+    set<string>vis;
     
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
         for(auto &acc:accounts){
